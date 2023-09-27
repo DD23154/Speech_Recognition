@@ -14,22 +14,20 @@ void messageCb(std_msgs::String & str_msg){
   }
   if(analogRead(3)!=0){
     if(strcmp(str_msg.data, "higher")==0){
-    analogWrite(3, 255);
+      analogWrite(3, 255);
+    }
+    else{
+      if(strcmp(str_msg.data, "lower")==0){
+        analogWrite(3, 60);
+      }
     }
   }
-  if(analogRead(3)!=0){
-    if(strcmp(str_msg.data, "lower")==0){
-    analogWrite(3, 60);
-    }
-  }
-  
 }
 
 
 ros::Subscriber<std_msgs::String> sub("chatter", &messageCb);
 
-void setup()
-{
+void setup(){
 
     pinMode(3, OUTPUT);
     nh.initNode();
@@ -39,9 +37,7 @@ void setup()
 
 
 
-void loop()
-
-{
+void loop(){
 
     nh.spinOnce();
     delay(1);
