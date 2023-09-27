@@ -1,6 +1,6 @@
 # Speech_Recognition
 
-For SpeechRecognition:\
+## For SpeechRecognition:\
     sudo apt-get update\
     sudo add-apt-repository universe\
     sudo add-apt-repository multiverse\
@@ -14,7 +14,7 @@ For SpeechRecognition:\
     pip3 install SpeechRecognition\
 
 
-For ROS Melodic:\
+## For ROS Melodic:\
     sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'\
     sudo apt install curl\
     curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -\
@@ -37,23 +37,24 @@ For ROS Melodic:\
     mkdir -p ~/catkin_ws/src/mmi_package/scripts\
 
 
-To use python3 with ROS Melodic:\
+## To use python3 with ROS Melodic:\
     sudo apt install python3-pip python3-all-dev python3-rospkg\
     sudo apt install ros-melodic-desktop-full --fix-missing\
 
 
-After the creation of the mynode.py file in scripts folder (test):\
+## After the creation of the mynode.py file in scripts folder (test):\
     sudo chmod +x mynode.py\
     cd ~/catkin_ws\
     catkin build\
     source ~/catkin_ws/devel/setup.bash\
     rosrun mmi_package mynode.py\
+
 To check what is published: rostopic echo /chatter\
 
 
-Connection with Arduino:\
+## Connection with Arduino:\
     sudo snap install arduino\
     sudo usermod -a -G dialout myuser\
-Add rosserial library 0.7.9 version\
+## Add rosserial library 0.7.9 version\
     rosrun rosserial_python serial_node.py /dev/ttyACM0 (port)\
 
