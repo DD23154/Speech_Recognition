@@ -1,5 +1,10 @@
 # Speech_Recognition
 
+## Introduction:
+The aim of this project is to get a vocal message from a computer, to tranmit it via a serial communication to an Arduino card using ROS.
+Depending on the vocal commands, leds will be switched on or off.
+If the light is on then will can make it brighter or not.
+
 ## For SpeechRecognition:\
     sudo apt-get update\
     sudo add-apt-repository universe\
