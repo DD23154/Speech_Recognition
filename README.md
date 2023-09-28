@@ -1,9 +1,9 @@
 # Speech_Recognition
 
 ## Introduction:
-The aim of this project is to get a vocal message from a computer, to tranmit it via a serial communication to an Arduino card using ROS.
-Depending on the vocal commands, leds will be switched on or off.
-If the light is on then will can make it brighter or not.
+The aim of this project is to get a vocal message from a computer and to tranmit it via a serial communication to an Arduino card using ROS (Robot Operating System) Melodic.
+Depending on the vocal command, leds will be switched on or off.
+If the light is on then other commands will allow us to increase or decrease the brightness.
 
 ## For SpeechRecognition:
     sudo apt-get update
